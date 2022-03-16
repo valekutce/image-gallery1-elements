@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&family=Poppins:wght@100&family=Source+Sans+Pro:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  background: #ededed;
+  font-family: 'Neucha', cursive;
+}
+
+.room-gallery {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.room-description {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #e2d2c0;
+  color: rgb(41, 41, 41);
+}
+.room-description h1 {
+  padding: 10px;
+  font-size: 40px;
+}
+.room-description p {
+  font-size: 20px;
+}
+
+.gallery-hightlight {
+  width: 100%;
+  height: 50%;
+}
+
+.room-preview {
+  display: flex;
+  width: 100%;
+  border: 2px solid #d3baa0;
+}
+.room-preview-block{
+  width: 33%;
+  height: 100px;
+}
+.room-preview img {
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  transition: opacity 0.4s ease;
+  cursor: pointer;
+}
+
+img.room-active {
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .room-gallery{
+    width: 50%;
+  }
+  .room-description {
+    padding: 30px;
+  }
+  .room-description h1 {
+      font-size: 30px;
+  }
+}
+@media (max-width: 425px) {
+  .room-description {
+    width: 46%;
+  }
+  .room-description h1 {
+    font-size: 22px;
+  }
+  .room-description p {
+    font-size: 18px;
+  }
+  .room-preview-block {
+    height: 75px;
+  }
+}
+@media (max-width: 375px) {
+  section {
+    flex-direction: column;
+  }
+  .room-description {
+    width: 100%;
+  }
+  .room-gallery {
+    width: 90%;
+    margin: auto;
+  }
+}
